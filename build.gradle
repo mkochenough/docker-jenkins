@@ -35,6 +35,7 @@ task buildImage(type: DockerBuildImage) {
     dependsOn updateUpstreamJenkinsImage
     inputDir = file('.')
     tag = 'mkoch/jenkins'
+    noCache = true
 }
 
 task wrapper(type: Wrapper) {
